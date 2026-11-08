@@ -211,6 +211,12 @@
   .contact-line{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:20px;font-size:.95rem}
 
   .final{background:var(--blue);color:#fff;text-align:center}
+  .drop{background:var(--navy);color:#fff;padding:56px 0}
+  .drop .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+  .drop .tag{color:#fff;background:transparent;display:inline-block;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 12px;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+  .drop h2{color:#fff;margin:12px 0 6px}
+  .drop p{margin:0;color:rgba(255,255,255,.78);max-width:520px}
+  .drop .btn{background:#fff;color:var(--navy)}
   footer{background:var(--navy);color:rgba(255,255,255,.75);padding:32px 0;font-size:.88rem}
   footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
   footer a{color:#fff}
@@ -485,6 +491,17 @@
   </div>
 </section>
 
+<section class="drop" id="drop">
+  <div class="wrap">
+    <div>
+      <span class="tag" data-i="drop.tag"></span>
+      <h2 data-i="drop.title"></h2>
+      <p data-i="drop.text"></p>
+    </div>
+    <a class="btn js-drop" href="#" data-track="drop_signup" data-i="drop.cta"></a>
+  </div>
+</section>
+
 <section class="final">
   <div class="wrap">
     <h2 data-i="motto"></h2>
@@ -495,7 +512,7 @@
 
 <footer>
   <div class="wrap">
-    <div><strong style="color:#fff">vindhi</strong> · <span data-i="foot.loc"></span> · <span id="year"></span></div>
+    <div>© <span id="year"></span> <strong style="color:#fff">VINDHI</strong> · <span data-i="foot.loc"></span> · <span data-i="rights"></span></div>
     <div data-i="footer"></div>
   </div>
 </footer>
@@ -524,13 +541,14 @@
   var PT = {
     "hero.eyebrow":"Aulas de surf · Ponta do Ouro, Moçambique",
     "hero.title":"O teu primeiro surf começa em Ponta do Ouro.",
-    "hero.lead":"1h30 com instrutores que são nadadores-salvadores e cresceram neste mar. O objetivo: pores-te de pé numa onda a sério logo na primeira aula. Só precisas de conseguir nadar alguns metros.",
-    "hero.price":"{L} MT por pessoa · tudo incluído · fotos da tua primeira onda grátis",
+    "hero.lead":"Aulas de 1h30 com instrutores nadadores-salvadores que cresceram neste mar. O objetivo: pores-te de pé numa onda a sério logo na primeira aula. Só precisas de conseguir nadar alguns metros.",
+    "hero.price":"{L} MT por pessoa · equipamento incluído · fotos da tua primeira onda grátis",
+    "drop.tag":"Em breve","drop.title":"Primeiro drop VINDHI","drop.text":"Roupa VINDHI, nascida em Ponta do Ouro. Ainda não está à venda. Manda DROP no WhatsApp e és dos primeiros a saber.","drop.cta":"Manda DROP no WhatsApp",
     "cta":"Reservar no WhatsApp","hero.cta2":"Calcular a viagem",
     "trust.1":"Instrutores ISA","trust.2":"Nadadores-salvadores certificados","trust.3":"Máximo 4 alunos por instrutor","trust.4":"Mar inseguro? Mudamos o dia ou devolvemos tudo",
     "w1t":"Surf o ano inteiro","w1":"Sem inverno a sério: qualquer mês serve para aprender.",
     "w2t":"Mar protegido","w2":"Património Mundial da UNESCO desde 2025.",
-    "w3t":"Água rasa e transparente","w3":"As primeiras ondas são onde tens pé.",
+    "w3t":"Água rasa e transparente","w3":"Começas onde tens pé.",
     "w4t":"Gente de cá","w4":"Instrutores que cresceram neste mar.",
     "l.eyebrow":"A aula","l.title":"Do zero à tua primeira onda",
     "l.lead":"Para quem vai surfar pela primeira vez ou quer melhorar. Explicamos na areia, estamos contigo na água e a segurança vem sempre primeiro. O objetivo da primeira aula: pores-te de pé numa onda a sério.",
@@ -575,13 +593,13 @@
     "t.tag":"Em preparação","t.title":"Viagens de surf","t.text":"Estamos a preparar as primeiras viagens. Ainda não estão à venda.",
     "a.eyebrow":"A equipa","a.title":"Aprendemos no mar de Ponta do Ouro.","a.title2":"Hoje, ensinamos.",
     "a.p1":"Somos surfistas de Ponta do Ouro. Aprendemos a surfar neste mar e conhecemos cada corrente, cada maré e cada onda desta costa.",
-    "a.p2":"Antes de termos qualquer certificado, já ajudávamos a salvar pessoas no mar, porque éramos nós que lá estávamos. Daí surgiu a ideia de formar os surfistas locais: em 2024, o projeto Lwandi Surf formou 8 jovens como nadadores-salvadores profissionais, com o SENSAP e o Parque Nacional de Maputo. Parte da nossa equipa está entre eles.",
+    "a.p2":"Antes de termos qualquer certificado, já ajudávamos a salvar pessoas no mar, porque éramos nós que lá estávamos. Em 2024, o projeto Lwandi Surf formou 8 jovens de Ponta do Ouro como nadadores-salvadores profissionais, com o SENSAP e o Parque Nacional de Maputo. Parte da nossa equipa está entre eles.",
     "a.p3":"A VINDHI nasceu em Ponta do Ouro. Quem vem de longe aprende com quem é daqui. E quem é daqui vê até onde o surf o pode levar.",
     "creds":["Instrutores ISA","Nadadores-salvadores certificados","Filmagem e análise de vídeo","Equipa de Ponta do Ouro"],
     "role":"Instrutor · Nadador-salvador","role.a":"Instrutor ISA","role.b":"Nadador-salvador",
     "cap.premiere":"Estreia do documentário Surf for Life, sobre o projeto Lwandi Surf.","watch":"Ver o documentário",
     "cap.boat":"Treino de salvamento no mar de Ponta do Ouro.",
-    "lwandi":"O Lwandi Surf é um projeto comunitário de Ponta do Ouro que ensina jovens daqui a surfar e os forma como nadadores-salvadores. Segundo o documentário Surf for Life, mais de 118 jovens aprenderam a surfar no projeto e os seus nadadores-salvadores salvaram mais de 50 vidas. A VINDHI é independente do Lwandi, mas as pranchas das nossas aulas são do projeto, e cada prancha que usamos é paga ao Lwandi.",
+    "lwandi":"O Lwandi Surf é um projeto comunitário de Ponta do Ouro que ensina jovens daqui a surfar e os forma como nadadores-salvadores. Segundo o documentário Surf for Life, mais de 118 jovens aprenderam a surfar no projeto e os seus nadadores-salvadores salvaram mais de 50 vidas. A VINDHI é independente do Lwandi.",
     "teamline":"Conhecemos este mar. Sabemos onde entrar, onde não ir e quando é melhor ficar na areia. É isso que levas daqui, além das ondas.",
     "gal.eyebrow":"As nossas aulas","gal.title":"Assim são as nossas aulas",
     "gal":["Aluna a remar a sorrir","Aula de remada com o monte de Ponta do Ouro ao fundo","Instrutor a explicar às alunas antes de entrar na água","Alunos a remar em água transparente","Surfista a sorrir numa onda pequena","Surfista a remar para uma onda verde"],
@@ -589,9 +607,9 @@
     "st.1":"Manda-nos mensagem no WhatsApp com a data e o número de pessoas.","st.2":"Confirmamos o horário, que depende da maré e das ondas.","st.3":"Aparece no local combinado e vai surfar.",
     "q.eyebrow":"Perguntas frequentes","q.title":"Antes de reservares",
     "faq":[
-      ["Segurança","Os nossos instrutores são também nadadores-salvadores certificados. Precisas de conseguir nadar alguns metros e de estar à vontade com a cabeça debaixo de água. Não precisas de nadar bem. Idade mínima: 8 anos. Menores de 18 precisam de autorização de um responsável; até aos 12 anos, um adulto acompanha da praia."],
+      ["Segurança","Os nossos instrutores são também nadadores-salvadores certificados. Precisas de conseguir nadar alguns metros e de estar à vontade com a cabeça debaixo de água. Não precisas de nadar bem. Idade mínima: 5 anos. Menores de 18 precisam de autorização de um responsável; até aos 12 anos, um adulto acompanha da praia."],
       ["A que horas é a aula?","Depende da maré e do vento. Confirmamos a melhor hora para o teu dia por WhatsApp, normalmente na véspera."],
-      ["Gostei da primeira aula. E agora?","Passa para um pack depois da tua primeira aula e descontamos o valor dessa aula no pack."],
+      ["Gostei da primeira aula. E agora?","Passa para um pack depois da tua primeira aula e descontamos o valor dessa aula no preço do pack."],
       ["E se o mar não estiver bom?","Se as condições forem seguras, a aula acontece, mesmo com ondas pequenas, que são ótimas para aprender. Se o mar não estiver seguro e formos nós a cancelar, passamos a aula para outro dia ou devolvemos o valor na totalidade."],
       ["Cancelar ou mudar a data","Aulas, Pack 3 e Pack 5: podes cancelar ou mudar a data sem custos até 24 horas antes. Com menos de 24 horas, o pagamento não é devolvido. Surf & Camp e Premium: para reservar pedimos um sinal de 30%. Se cancelares com menos de 7 dias, o sinal não é devolvido; o resto devolvemos."],
       ["Pagamento","Aceitamos dinheiro, e-Mola, M-Pesa, cartão Visa e transferência bancária. Surf & Camp ou Premium a partir do estrangeiro? Escreve-nos no WhatsApp e dizemos-te como pagar o sinal de 30% a partir do teu país."],
@@ -608,7 +626,7 @@
     "lvl":["Nunca surfei","Já experimentei algumas vezes","Já consigo ficar de pé","Surfo sozinho (sessão guiada)"],
     "guideOpt":"Sessão guiada",
     "motto":"Vem surfar com quem é daqui.","finalline":"Diz-nos a data e quantas pessoas são.",
-    "foot.loc":"Ponta do Ouro, Moçambique","footer":"O oceano muda vidas.",
+    "foot.loc":"Ponta do Ouro, Moçambique","footer":"O oceano muda vidas.","rights":"Todos os direitos reservados.",
     "alt.first":"Aluna feliz, de braço no ar, dentro de água ao lado da prancha","alt.team":"Dois surfistas da equipa na praia, um deles de fato e prancha",
     "alt.premiere":"Pessoas em palco na estreia do documentário Surf for Life","alt.boat":"Jovens num barco durante um treino de salvamento",
     "msgLesson":"Olá! Quero reservar uma aula de surf em Ponta do Ouro. Data: __ | Pessoas: __",
@@ -621,32 +639,33 @@
   var EN = {
     "hero.eyebrow":"Surf lessons · Ponta do Ouro, Mozambique",
     "hero.title":"Your first surf starts in Ponta do Ouro.",
-    "hero.lead":"90 minutes with instructors who are lifeguards and grew up in this sea. The goal: standing up on a real wave in your very first lesson. You only need to be able to swim a few metres.",
-    "hero.price":"{L} MT per person · all included · free photos of your first wave",
+    "hero.lead":"90-minute lessons with lifeguard instructors who grew up in this ocean. The goal: standing up on a real wave in your very first lesson. You only need to be able to swim a few metres.",
+    "hero.price":"{L} MT per person · gear included · free photos of your first wave",
+    "drop.tag":"Coming soon","drop.title":"First VINDHI drop","drop.text":"VINDHI apparel, born in Ponta do Ouro. Not on sale yet. Send DROP on WhatsApp and be the first to know.","drop.cta":"Send DROP on WhatsApp",
     "cta":"Book on WhatsApp","hero.cta2":"Plan your trip",
-    "trust.1":"ISA instructors","trust.2":"Certified lifeguards","trust.3":"Max 4 students per instructor","trust.4":"Unsafe sea? We move the day or refund in full",
+    "trust.1":"ISA instructors","trust.2":"Certified lifeguards","trust.3":"Max 4 students per instructor","trust.4":"Unsafe sea? We reschedule or refund in full",
     "w1t":"Surf all year","w1":"No real winter: any month works for learning.",
     "w2t":"A protected ocean","w2":"UNESCO World Heritage since 2025.",
-    "w3t":"Clear, shallow water","w3":"Your first waves are where you can stand.",
+    "w3t":"Clear, shallow water","w3":"You start where you can stand.",
     "w4t":"Locals","w4":"Instructors who grew up in this sea.",
     "l.eyebrow":"The lesson","l.title":"From zero to your first wave",
     "l.lead":"For people surfing for the first time and for those who want to get better. We explain on the sand, stay with you in the water, and safety always comes first. The goal of your first lesson: standing up on a real wave.",
     "l.badge":"First time","l1.name":"Surf lesson","l1.per":"per person · 1h30 session",
     "included":["An instructor for the whole session, max 4 students per instructor","Surfboard included","Rash vest, sunscreen and wetsuit, if needed","Warm-up, technique on the sand and ocean safety","Feedback so you know what to work on next","Photos of your first wave, at no extra cost"],
     "l2.name":"Group · 3 or more people","l2.per":"per person, per session",
-    "l2.f1":"Families and friends, same session","l2.f2":"The same safety rules: max 4 students per instructor","l2.f3":"Photos of everyone’s first wave","l2.cta":"Book for a group",
+    "l2.f1":"Families and friends, in the same session","l2.f2":"The same safety rules: max 4 students per instructor","l2.f3":"Photos of everyone’s first wave","l2.cta":"Book for a group",
     "bring.t":"What to bring","bring":"Swimwear, a towel and water. Rash vest, sunscreen and a wetsuit are on us, if you need them.",
     "appt.t":"By appointment only","appt":"We schedule each lesson around the tide and the waves, so you surf at the best time of day.",
     "first.eyebrow":"Included in your first lesson","first.title":"Your first wave deserves to be remembered.",
-    "first.text":"On your first lesson with us, we photograph your best moments and give you the photos, at no extra cost.",
+    "first.text":"In your first lesson with us, we photograph your best moments and give you the photos, at no extra cost.",
     "pk.eyebrow":"Surf more, pay less","pk.title":"Session packs",
-    "pk.lead":"Live in Maputo, or spending a few days in Ponta do Ouro? With a pack you surf more and pay less per session. We agree the days with you. In the 5-session, Surf & Camp and Premium packs we also film your sessions and watch the video with you on the beach.",
+    "pk.lead":"Live in Maputo, or spending a few days in Ponta do Ouro? With a pack you surf more and pay less per session. We plan the days with you. In the 5-session, Surf & Camp and Premium packs we also film your sessions and watch the video with you on the beach.",
     "pk.group":"Groups of 3 or more: {O} MT off per person on every session. Does not apply to Premium.",
     "perSession":"per person · {X} MT per session","allIn":"per person · all included","save":"You save {X} MT",
     "photos":"Photos of every session included","photosVideo":"Photos of every session + video analysis","packBtn":"Book this pack",
     "packs":[
-      {tag:"Pack 3",title:"3 sessions",text:"3 sessions of 1h30 in the same week. In each one we work on your stance, paddling and wave reading."},
-      {tag:"To really progress",title:"5 sessions",text:"5 sessions of 1h30 in one week. We follow your progress session by session and film you so you can see what to change."},
+      {tag:"Pack 3",title:"3 sessions",text:"Three 1h30 sessions in the same week. In each one we work on your stance, paddling and wave reading."},
+      {tag:"To really progress",title:"5 sessions",text:"Five 1h30 sessions in one week. We follow your progress session by session and film you so you can see what to change."},
       {tag:"Surf & Camp",title:"3 nights + 6 sessions",text:"3 nights in a ready-pitched tent at the Underwater Explorer accommodation, plus 2 sessions a day (6 in total, 1h30 each). Simple camping accommodation."},
       {tag:"Premium",title:"6 nights + 10 one-to-one sessions",text:"6 nights in a ready-pitched tent at the Underwater Explorer accommodation, and 10 sessions with an instructor just for you. We film, review the video with you, and you keep the photos of every session.",save:"One-to-one coaching in every session"}
     ],
@@ -660,7 +679,7 @@
     "m.s1t":"Ocean safety","m.s1":"Reading currents, where to be and how to stay calm in the sea. Before anything else.",
     "m.s2t":"Board basics","m.s2":"Paddling, balance and catching whitewater with your instructor beside you.",
     "m.s3t":"Standing up","m.s3":"Pop-up, stance and steering. In the packs we film you and show you what to fix.",
-    "m.s4t":"Riding alone","m.s4":"Choosing and catching waves on your own, so you can keep surfing after.",
+    "m.s4t":"Riding alone","m.s4":"Choosing and catching waves on your own, so you can keep surfing after your lessons.",
     "more.title":"Beyond the lesson",
     "g.tag":"Experienced surfers","g.title":"Guided sessions",
     "g.text":"We take you to the breaks in the region that work best for the day’s conditions. From 3,000 MT per person.","g.more":"Learn more +",
@@ -670,15 +689,15 @@
     "g.priceT":"Price","g.price":"1 person: 4,000 MT. 2 to 4 people: 3,000 MT per person. Up to 2 hours in the water. Photos and video of your session: +2,000 MT. Breaks outside Ponta do Ouro: transport is extra and we tell you the price before you book.",
     "g.btn":"Ask for a guided session",
     "t.tag":"In preparation","t.title":"Surf trips","t.text":"We are preparing our first trips. They are not on sale yet.",
-    "a.eyebrow":"The team","a.title":"We learned in the sea of Ponta do Ouro.","a.title2":"Today, we teach it.",
+    "a.eyebrow":"The team","a.title":"We learned to surf in Ponta do Ouro.","a.title2":"Today, we teach.",
     "a.p1":"We are surfers from Ponta do Ouro. We learned to surf in this sea and we know every current, every tide and every wave on this coast.",
-    "a.p2":"Long before any certificate, we were already helping to save people in the sea, because we were the ones out there. That is where the idea came from to train the local surfers: in 2024 the Lwandi Surf project trained 8 young people as professional lifeguards, together with SENSAP and Maputo National Park. Part of our team is among them.",
-    "a.p3":"VINDHI was born in Ponta do Ouro. People from far away learn from people who are from here. And people from here see how far surfing can take them.",
-    "creds":["ISA instructors","Certified lifeguards","Filming and video analysis","A Ponta do Ouro team"],
+    "a.p2":"Long before any certificate, we were already helping to save people in the sea, because we were the ones out there. In 2024, the Lwandi Surf project trained 8 young people from Ponta do Ouro as professional lifeguards, together with SENSAP and Maputo National Park. Part of our team is among them.",
+    "a.p3":"VINDHI was born in Ponta do Ouro. Visitors learn from locals. And locals see how far surfing can take them.",
+    "creds":["ISA instructors","Certified lifeguards","Filming and video analysis","Team from Ponta do Ouro"],
     "role":"Instructor · Lifeguard","role.a":"ISA Instructor","role.b":"Lifeguard",
     "cap.premiere":"Premiere of the documentary Surf for Life, about the Lwandi Surf project.","watch":"Watch the documentary",
     "cap.boat":"Rescue training at sea in Ponta do Ouro.",
-    "lwandi":"Lwandi Surf is a community project in Ponta do Ouro that teaches local young people to surf and trains them as lifeguards. According to the documentary Surf for Life, more than 118 young people have learned to surf with the project and its lifeguards have saved more than 50 lives. VINDHI is independent from Lwandi, but the boards in our lessons belong to the project, and every board we use is paid to Lwandi.",
+    "lwandi":"Lwandi Surf is a community project in Ponta do Ouro that teaches local young people to surf and trains them as lifeguards. According to the documentary Surf for Life, more than 118 young people have learned to surf with the project and its lifeguards have saved more than 50 lives. VINDHI is independent from Lwandi.",
     "teamline":"We know this sea. We know where to get in, where not to go and when it is better to stay on the sand. That is what you take home, along with the waves.",
     "gal.eyebrow":"Our lessons","gal.title":"This is what our lessons look like",
     "gal":["Student paddling and smiling","Paddling lesson with the Ponta do Ouro hill behind","Instructor briefing students before going in","Students paddling in clear water","Surfer smiling on a small wave","Surfer paddling towards a green wave"],
@@ -686,11 +705,11 @@
     "st.1":"Message us on WhatsApp with the date and number of people.","st.2":"We confirm the time, which depends on tide and waves.","st.3":"Show up at the agreed spot and go surf.",
     "q.eyebrow":"FAQ","q.title":"Before you book",
     "faq":[
-      ["Safety","Our instructors are also certified lifeguards. You need to be able to swim a few metres and be comfortable with your head underwater. You do not need to be a strong swimmer. Minimum age: 8. Anyone under 18 needs a parent or guardian’s consent; up to age 12, an adult follows along from the beach."],
+      ["Safety","Our instructors are also certified lifeguards. You need to be able to swim a few metres and be comfortable with your head underwater. You do not need to be a strong swimmer. Minimum age: 5. Anyone under 18 needs a parent or guardian’s consent; up to age 12, an adult follows along from the beach."],
       ["What time is the lesson?","It depends on the tide and wind. We confirm the best time for your day on WhatsApp, usually the day before."],
-      ["I loved my first lesson. What now?","Move to a pack after your first lesson and we discount that lesson from the pack price."],
+      ["I loved my first lesson. What now?","Move to a pack after your first lesson and we take the price of that lesson off the pack."],
       ["What if the sea is not good?","If conditions are safe, the lesson goes ahead, even with small waves, which are great for learning. If the sea is unsafe and we cancel, we move your lesson to another day or refund you in full."],
-      ["Cancelling or changing the date","Lessons, Pack 3 and Pack 5: you can cancel or change the date free of charge up to 24 hours before. Within 24 hours, the payment is not refunded. Surf & Camp and Premium: we ask for a 30% deposit to book. If you cancel less than 7 days before, the deposit is not refunded; we refund the rest."],
+      ["Cancelling or changing the date","Lessons, Pack 3 and Pack 5: you can cancel or change the date free of charge up to 24 hours before. Less than 24 hours before, the payment is not refunded. Surf & Camp and Premium: we ask for a 30% deposit to book. If you cancel less than 7 days before, the deposit is not refunded; we refund the rest."],
       ["Payment","We accept cash, e-Mola, M-Pesa, Visa card and bank transfer. Booking Surf & Camp or Premium from abroad? Message us on WhatsApp and we will tell you how to pay the 30% deposit from your country."],
       ["Where do we meet?","In Ponta do Ouro. Open the map to see the exact meeting point: maps.app.goo.gl/tYxNEs2VLX8EHtzKA"]
     ],
@@ -701,11 +720,11 @@
     "addon.name":"Photo gallery","addon.desc":"every edited photo of your session, delivered within 24h",
     "r.title":"What our students say","r.lead":"Real 5-star reviews from our Google profile.","r.cta":"See all on Google","r.leave":"Leave us a review ⭐","r.src":"Google review","r.src2":"Local Guide · Google review",
     "b.photos":"Add the photo gallery (+1,000 MT)",
-    "b.submit":"Send on WhatsApp","b.note":"Nothing is paid now. We confirm the time first.","b.map":"Meeting point",
+    "b.submit":"Send on WhatsApp","b.note":"You pay nothing now. We confirm the time first.","b.map":"Meeting point",
     "lvl":["Never surfed","Tried a few times","I can stand up","I surf on my own (guided session)"],
     "guideOpt":"Guided session",
-    "motto":"Come surf with someone from here.","finalline":"Tell us the date and how many people.",
-    "foot.loc":"Ponta do Ouro, Mozambique","footer":"The ocean changes lives.",
+    "motto":"Come surf with the locals.","finalline":"Tell us the date and how many people.",
+    "foot.loc":"Ponta do Ouro, Mozambique","footer":"The ocean changes lives.","rights":"All rights reserved.",
     "alt.first":"Happy student with an arm in the air, standing in the water beside her board","alt.team":"Two team surfers on the beach, one in a wetsuit with a board",
     "alt.premiere":"People on stage at the premiere of the documentary Surf for Life","alt.boat":"Young people on a boat during rescue training",
     "msgLesson":"Hi! I would like to book a surf lesson in Ponta do Ouro. Date: __ | People: __",
@@ -752,6 +771,7 @@
     document.querySelectorAll(".js-photos").forEach(function(el){ el.textContent = fmt(CONFIG.photos); });
     document.getElementById("included").innerHTML = t.included.map(function(x){ return "<li>" + esc(x) + "</li>"; }).join("");
     document.getElementById("creds").innerHTML = t.creds.map(function(x){ return "<span>" + esc(x) + "</span>"; }).join("");
+    document.querySelectorAll(".js-drop").forEach(function(a){ a.href = wa("DROP"); a.target = "_blank"; a.rel = "noopener"; });
     document.querySelectorAll(".js-wa, .final .btn").forEach(function(a){
       var m = a.dataset.msg === "guide" ? t.msgGuide : (a.dataset.track === "select_group" ? t.msgGroup : t.msgLesson);
       a.href = wa(m); a.target = "_blank"; a.rel = "noopener";
